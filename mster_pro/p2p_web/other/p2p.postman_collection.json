@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "2275ced9-e465-44a3-a4fc-eb6db981b544",
+		"name": "p2p",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "积分商城",
+			"item": [
+				{
+					"name": "获取accessToken",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/p2p/getAccessToken?appid=123456&secret=123456",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"p2p",
+								"getAccessToken"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "123456"
+								},
+								{
+									"key": "secret",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "同步用户信息和积分",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "access_token",
+									"value": "NJIWYTKXNDUWY2ZHYZBIMDHHNGEXNMQ3M2ZKNTU3OGY=6049B792D6863",
+									"description": "access_token",
+									"type": "text"
+								},
+								{
+									"key": "appid",
+									"value": "123456",
+									"description": "appid",
+									"type": "text"
+								},
+								{
+									"key": "secret",
+									"value": "123456",
+									"description": "secret",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "15767043580",
+									"description": "用户手机号",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "-谌康",
+									"description": "用户昵称",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "https://www.baidu.com",
+									"description": "用户头像",
+									"type": "text"
+								},
+								{
+									"key": "score",
+									"value": "50",
+									"description": "减少/增加的积分",
+									"type": "text"
+								},
+								{
+									"key": "mer_user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/p2p/synchronous",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"p2p",
+								"synchronous"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户积分列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwMnAudHRod2VpeGluLmNvbSIsImF1ZCI6InAycC50dGh3ZWl4aW4uY29tIiwiaWF0IjoxNjE1NDQzNDMwLCJuYmYiOjE2MTU0NDM0MzAsImV4cCI6MjQ4NjM1NTQzMCwianRpIjpbMjAsInVzZXIiXX0.-Im4G4x4ZeTJX7rZ5nOtAJ2LAs0ccib9STGo8aXMkVA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/p2p/userScore",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"p2p",
+								"userScore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "前台登录",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "account",
+									"value": "15767043580",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "15767043580",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://p2p.tthweixin.com/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"p2p",
+								"tthweixin",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "积分商品",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/p2p/scoreProduct?page=1&limit=8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"p2p",
+								"scoreProduct"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "首页积分商品",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/p2p/homeScoreProduct",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"p2p",
+								"homeScoreProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "首页分类商品",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/p2p/categoryProduct",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"p2p",
+								"categoryProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

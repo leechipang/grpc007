@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+a,
+p,
+ul,
+li,
+span,
+div,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img {
+    display: inline-block;
+}
+
+input {
+    text-indent: 0;
+    background: transparent;
+    border: 0 none;
+    resize: none;
+    outline: none;
+    /*清除选中效果的默认蓝色边框 */
+    -webkit-appearance: none;
+    /*清除浏览器默认的样式 */
+    line-height: normal;
+}
+
+input:-webkit-input-placeholder {
+    line-height: 0.44rem;
+}
+
+input:focus {
+    color: #8b8791;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+}
+
+
+/*隐藏滚轮*/
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
